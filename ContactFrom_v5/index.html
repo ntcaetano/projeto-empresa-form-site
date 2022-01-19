@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="images/icons/favicon.png">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -30,28 +30,32 @@
 <!--===============================================================================================-->
 </head>
 <body>
-
+	<header>
+			<div class="img-header">
+				<img src="images/bluecrop.png" alt="imagem" width=100%>
+			</div>
+		</header>
 
 	<div class="container-contact100">
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form">
+			<form method="post" action="processa.php" class="contact100-form validate-form">
 				<span class="contact100-form-title">
 					Proposta: Renegociação
 				</span>
 
 				<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
 					<span class="label-input100">NOME COMPLETO *</span>
-					<input class="input100" type="text" name="name" placeholder="Digite seu nome completo">
+					<input class="input100" type="text" name="name" maxlength="40" placeholder="Digite seu nome completo">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">Endereço *</span>
-					<input class="input100" type="text" name="endereço" placeholder="Digite seu endereço">
+					<input class="input100" type="text" name="endereço" maxlength="40" placeholder="Digite seu endereço">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">Cpf</span>
-					<input class="input100" type="text" name="cpf" placeholder="Digite seu cpf">
+					<input class="input100" type="text" name="cpf" maxlength="11" placeholder="Digite seu cpf">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
@@ -61,38 +65,38 @@
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">WhatsApp</span>
-					<input class="input100" type="text" name="telefone" placeholder="Digite seu número de contato">
+					<input class="input100" type="text" name="telefone" maxlength="10" placeholder="Digite seu número de contato">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">Contrato *</span>
-					<input class="input100" type="text" name="contrato" placeholder="Digite o número do contrato">
+					<input class="input100" type="text" name="contrato" maxlength="50" placeholder="Digite o número do contrato">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">Cidade</span>
-					<input class="input100" type="text" name="cidade" placeholder="Digite sua cidade">
+					<input class="input100" type="text" name="cidade" maxlength="50" placeholder="Digite sua cidade">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">Cep *</span>
-					<input class="input100" type="text" name="cep" placeholder="Digite seu cep">
+					<input class="input100" type="text" name="cep" maxlength="20" placeholder="Digite seu cep">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">Vencimento</span>
-					<input class="input100" type="text" name="vencimento" placeholder="Digite a data do vencimento">
+					<input class="input100" type="text" name="vencimento" maxlength="8" placeholder="Digite a data do vencimento">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">Valor de negociação *</span>
-					<input class="input100" type="text" name="negociação" placeholder="Digite o valor da negociação">
+					<input class="input100" type="text" name="negociação" maxlength="50" placeholder="Digite o valor da negociação">
 				</div>
 
 				<div class="wrap-input100 input100-select bg1">
 					<span class="label-input100">Vendedor *</span>
 					<div>
-						<select class="js-select2" name="vendedor">
+						<select class="js-select2" name="vendedor" maxlength="20">
 							<option>Alexia Netto</option>
 							<option>Brenda Pierini</option>
 							<option>Camila Freitas</option>
@@ -109,7 +113,7 @@
 				</div>
 
 				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn">
+					<button type="submit" value="Salvar" class="contact100-form-btn">
 						<span>
 							Enviar
 							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
@@ -195,8 +199,11 @@
   gtag('config', 'UA-23581568-13');
 </script>
 
-	<footer>
-
-	</footer>
+<footer>
+	<div class="img-footer">
+			<img src="images/bluecrop.png" alt="imagem" width=100%>
+		</div>
+	</div>
+</footer>
 </body>
 </html>

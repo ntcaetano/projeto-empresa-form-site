@@ -85,6 +85,18 @@ ul, li {
 	list-style-type: none;
 }
 
+/*---------------------------------------------*/
+
+header {
+  background-color: #333333;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.img-header {
+  margin: auto;
+  width: 300px;
+}
 
 /*---------------------------------------------*/
 input {
@@ -517,6 +529,16 @@ textarea.input100 {
   -webkit-box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.2);
   -ms-box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: #333333;
+  padding: 10px;
+}
+
+.img-footer {
+  margin: auto;
+  width: 200px;
 }
 
 @media (max-width: 576px) {
