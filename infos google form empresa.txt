@@ -1,0 +1,110 @@
+Nome completo (varchar (50))
+Endereço (varchar (50))
+Cpf (varchar (11))
+Data de nasc (date)
+Whats (tinytext)
+Contrato (varchar (50))
+Cidade (varchar (50))
+Cep (varchar (10))
+Vencimento (date)
+Valor de negociação (money)
+Vendedor (varchar (50))
+Observação - vendedor (text)
+
+
+Alexia Netto
+Brenda Pierini
+Camila Freitas
+Jose Vieira
+Livia Vitoria
+manuela.pereira
+natieli.silva
+rafaela.silva
+william.moreira
+xaiane.santos
+alexandre.rocha
+amanda.oliveira
+camilly.quadros
+Fernanda.martinho
+frantierry.oliveira
+joao.vitor
+julia.camilles
+luiza.cremer
+maicon.santos
+rhyan.rodrigues
+samuel.rodrigo
+evelyn.farias
+gabriel.freitas
+gabrielle.mattos
+geovane.cardoso
+gloria.barbosa
+laysla.silva
+mateus.machado
+matheus.paim
+nathally.santos
+pierry.fachel
+willian.trappes
+eduarda.santos
+eduarda.fernandes
+fernanda.martins
+maria.rodrigues
+Rafaela.vívian
+tamara.oliveira
+ana.carli
+gabrielle.silveira
+agatha.santos
+vitoria.lima
+camily.menezes
+lesley.azevedo
+fernanda.oliveira
+natasha.melo
+nicolas.lima
+lorenzo.costa
+maria.almeida
+jackson.lafonte
+bryan.wait
+tania.carvalho
+vitoria.silva
+wesley.azevedo
+guilherme.dutra
+andre.pereira
+andrey.cabral
+brunno.silveira
+emelly.cruz
+francyelli.jacoby
+guilherme.oliveira
+luiz.brum
+marjana.garcia
+raissa.lima
+rayane.adolpho
+thaylor.borges
+vitor.macedo
+brandon.mendes
+cassia.silva
+gabrielle.santos
+geovana.silva
+derik.brito
+lucas.miranda
+ygor.castro
+allyson.silveira
+pedro.rodrigues
+lidio.santos
+nicolle.silva
+eduarda.domingues
+luyse.rosa
+murilo.santos
+BlueBOT
+joao.pires
+tiago.santos
+julia.vargas
+nathielly.goncalves
+luiz.oliveira
+alexandre.porto
+vitoria.peres
+bryana.costa
+rafaella.nunes
+jeferson.alves
+amanda.silva
+leonardo.lima
+kauane.silva
+andriele.forte

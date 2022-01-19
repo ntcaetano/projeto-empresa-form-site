@@ -1,0 +1,7 @@
+Cor de fundo do container:
+
+background-image: linear-gradient(to bottom, rgba(0, 119, 255, 0.829), rgba(46, 144, 255, 0.829), rgba(106, 175, 253, 0.829), rgba(141, 192, 250, 0.829));
+
+Cor de botão (hover):
+
+rgba(0, 119, 255, 0.829)
