@@ -42,6 +42,20 @@
         });
     });
 
+
+    function validate (input) {
+        if($(input).attr('type') == 'cpf' || $(input).attr('name') == 'cpf') {
+            if($(input).val().trim().match(/^([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})$/) == null) {
+                return false;
+            }
+        }
+        else {
+            if($(input).val().trim() == ''){
+                return false;
+            }
+        }
+    }
+
      /*function validate (input) {
         if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
             if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
@@ -53,7 +67,20 @@
                 return false;
             }
         }
-    }*/
+    }
+    
+    function validaCPF (input) {   
+
+    var ao_cpf=document.forms.form1.cpf.value; 
+    var cpfValido = /^(([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2}))$/;     
+    if (cpfValido.test(cpf) == false)    {  
+       //alert("invalido");
+       var valorValido = document.getElementById("ao_cpf").value = "???????";
+    }
+}
+    
+    
+    */
 
     function showValidate(input) {
         var thisAlert = $(input).parent();
@@ -74,6 +101,12 @@
         $(thisAlert).find('.btn-hide-validate').remove();
     }
     
-    
+
 
 })(jQuery);
+
+    $(document).ready(function() {
+    $(".js-select2").select2({
+      searchInputPlaceholder: 'Digite o vendedor'
+    });
+  });

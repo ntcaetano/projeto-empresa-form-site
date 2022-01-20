@@ -286,6 +286,9 @@ textarea.input100 {
   width: 100%;
 }
 
+.js-select2 {
+  height: 1px;
+}
 
 /*------------------------------------------------------------------
 [ Button ]*/
@@ -334,7 +337,7 @@ textarea.input100 {
 }
 
 .contact100-form-btn:hover {
-  background-color: rgba(0, 119, 255, 0.829);
+  background-image: linear-gradient(to left, rgba(0, 119, 255, 0.829), rgba(46, 144, 255, 0.829), rgba(106, 175, 253, 0.829), rgba(141, 192, 250, 0.829));
 }
 
 .contact100-form-btn:hover i {

@@ -43,71 +43,158 @@
 					Proposta: Renegociação
 				</span>
 
-				<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
+				<div class="wrap-input100 validate-input bg1" data-validate="Campo obrigatório">
 					<span class="label-input100">NOME COMPLETO *</span>
 					<input class="input100" type="text" name="name" maxlength="40" placeholder="Digite seu nome completo">
 				</div>
 
-				<div class="wrap-input100 bg1 rs1-wrap-input100">
-					<span class="label-input100">Endereço *</span>
-					<input class="input100" type="text" name="endereço" maxlength="40" placeholder="Digite seu endereço">
-				</div>
-
-				<div class="wrap-input100 bg1 rs1-wrap-input100">
-					<span class="label-input100">Cpf</span>
-					<input class="input100" type="text" name="cpf" maxlength="11" placeholder="Digite seu cpf">
+				<div class="wrap-input100 bg1 rs1-wrap-input100" id="cpf1" data-validate="Campo obrigatório">
+					<span class="label-input100">Cpf *</span>
+					<input class="input100" type="text" name="cpf" id="cpf" maxlength="14" placeholder="000.000.000-00" autocomplete="off">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">Data de nascimento *</span>
-					<input class="input100" type="text" name="data" placeholder="Digite sua data de nascimento">
+					<input class="input100" type="date" input name="data" placeholder="Digite sua data de nascimento">
 				</div>
 
-				<div class="wrap-input100 bg1 rs1-wrap-input100">
-					<span class="label-input100">WhatsApp</span>
+				<div class="wrap-input100 bg1 rs1-wrap-input100" data-validate="Campo obrigatório">
+					<span class="label-input100">WhatsApp *</span>
 					<input class="input100" type="text" name="telefone" maxlength="10" placeholder="Digite seu número de contato">
 				</div>
 
-				<div class="wrap-input100 bg1 rs1-wrap-input100">
+				<div class="wrap-input100 bg1 rs1-wrap-input100" data-validate="Campo obrigatório">
 					<span class="label-input100">Contrato *</span>
 					<input class="input100" type="text" name="contrato" maxlength="50" placeholder="Digite o número do contrato">
 				</div>
 
-				<div class="wrap-input100 bg1 rs1-wrap-input100">
-					<span class="label-input100">Cidade</span>
+				<div class="wrap-input100 bg1 rs1-wrap-input100" data-validate="Campo obrigatório">
+					<span class="label-input100">Cidade *</span>
 					<input class="input100" type="text" name="cidade" maxlength="50" placeholder="Digite sua cidade">
 				</div>
 
-				<div class="wrap-input100 bg1 rs1-wrap-input100">
+				<div class="wrap-input100 bg1 rs1-wrap-input100" data-validate="Campo obrigatório">
+					<span class="label-input100">Endereço *</span>
+					<input class="input100" type="text" name="endereço" maxlength="40" placeholder="Digite seu endereço">
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100" data-validate="Campo obrigatório">
 					<span class="label-input100">Cep *</span>
 					<input class="input100" type="text" name="cep" maxlength="20" placeholder="Digite seu cep">
 				</div>
 
-				<div class="wrap-input100 bg1 rs1-wrap-input100">
-					<span class="label-input100">Vencimento</span>
-					<input class="input100" type="text" name="vencimento" maxlength="8" placeholder="Digite a data do vencimento">
+				<div class="wrap-input100 bg1 rs1-wrap-input100" data-validate="Campo obrigatório">
+					<span class="label-input100">Vencimento *</span>
+					<input class="input100" type="date" input name="data" placeholder="Digite a data do vencimento">
 				</div>
 
-				<div class="wrap-input100 bg1 rs1-wrap-input100">
+				<div class="wrap-input100 bg1 rs1-wrap-input100" data-validate="Campo obrigatório">
 					<span class="label-input100">Valor de negociação *</span>
 					<input class="input100" type="text" name="negociação" maxlength="50" placeholder="Digite o valor da negociação">
 				</div>
 
-				<div class="wrap-input100 input100-select bg1">
+				<div class="wrap-input100 input100-select bg1" data-validate="Campo obrigatório">
 					<span class="label-input100">Vendedor *</span>
 					<div>
 						<select class="js-select2" name="vendedor" maxlength="20">
+							<option placeholder="" value="" >Selecione</option>
+							<option>Agatha Santos</option>
+							<option>Alexandre Porto</option>
+							<option>Alexandre Rocha</option>
 							<option>Alexia Netto</option>
+							<option>Allyson Silveira</option>
+							<option>Amanda Oliveira</option>
+							<option>Amanda Silva</option>
+							<option>Ana Carli</option>
+							<option>Andre Pereira</option>
+							<option>Andrey Cabral</option>
+							<option>Andriele Forte</option>
+							<option>Bluebot</option>
+							<option>Brandon Mendes</option>
 							<option>Brenda Pierini</option>
+							<option>Brunno Silveira</option>
+							<option>Bryan Wait</option>
+							<option>Bryana Costa</option>
 							<option>Camila Freitas</option>
+							<option>Camilly Quadros</option>
+							<option>Camily Menezes</option>
+							<option>Cassia Silva</option>
+							<option>Derik Brito</option>
+							<option>Eduarda Domingues</option>
+							<option>Eduarda Fernandes</option>
+							<option>Eduarda Santos</option>
+							<option>Emelly Cruz</option>
+							<option>Evelyn Farias</option>
+							<option>Fernanda Martins</option>
+							<option>Fernanda Oliveira</option>
+							<option>Fernanda.Martinho</option>
+							<option>Francyelli Jacoby</option>
+							<option>Frantierry Oliveira</option>
+							<option>Gabriel Freitas</option>
+							<option>Gabrielle Mattos</option>
+							<option>Gabrielle Santos</option>
+							<option>Gabrielle Silveira</option>
+							<option>Geovana Silva</option>
+							<option>Geovane Cardoso</option>
+							<option>Gloria Barbosa</option>
+							<option>Guilherme Dutra</option>
+							<option>Guilherme Oliveira</option>
+							<option>Jackson Lafonte</option>
+							<option>Jeferson Alves</option>
+							<option>Joao Pires</option>
+							<option>Joao Vitor</option>
 							<option>Jose Vieira</option>
+							<option>Julia Camilles</option>
+							<option>Julia Vargas</option>
+							<option>Kauane Silva</option>
+							<option>Laysla Silva</option>
+							<option>Leonardo Lima</option>
+							<option>Lesley Azevedo</option>
+							<option>Lidio Santos</option>
 							<option>Livia Vitoria</option>
+							<option>Lorenzo Costa</option>
+							<option>Lucas Miranda</option>
+							<option>Luiz Brum</option>
+							<option>Luiz Oliveira</option>
+							<option>Luiza Cremer</option>
+							<option>Luyse Rosa</option>
+							<option>Maicon Santos</option>
+							<option>Manuela Pereira</option>
+							<option>Maria Almeida</option>
+							<option>Maria Rodrigues</option>
+							<option>Marjana Garcia</option>
+							<option>Mateus Machado</option>
+							<option>Matheus Paim</option>
+							<option>Murilo Santos</option>
+							<option>Natasha Melo</option>
+							<option>Nathally Santos</option>
+							<option>Nathielly Goncalves</option>
+							<option>Natieli Silva</option>
+							<option>Nicolas Lima</option>
+							<option>Nicolle Silva</option>
+							<option>Pedro Rodrigues</option>
+							<option>Pierry Fachel</option>
+							<option>Rafaela Silva</option>
+							<option>Rafaela Vívian</option>
+							<option>Rafaella Nunes</option>
+							<option>Raissa Lima</option>
+							<option>Rayane Adolpho</option>
+							<option>Rhyan Rodrigues</option>
+							<option>Samuel Rodrigo</option>
+							<option>Tamara Oliveira</option>
+							<option>Tania Carvalho</option>
+							<option>Thaylor Borges</option>
+							<option>Tiago Santos</option>
+							<option>Vitor Macedo</option>
+							<option>Vitoria Lima</option>
+							<option>Vitoria Peres</option>
+							<option>Vitoria Silva</option>
 						</select>
 						<div class="dropDownSelect2"></div>
 					</div>
 				</div>
 
-				<div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Please Type Your Message">
+				<div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Informações obrigatórias">
 					<span class="label-input100">Observação</span>
 					<textarea class="input100" name="mensagem" placeholder="Digite sua mensagem aqui..."></textarea>
 				</div>
