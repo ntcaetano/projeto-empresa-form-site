@@ -44,7 +44,7 @@
 
 
     function validate (input) {
-        if($(input).attr('type') == 'cpf' || $(input).attr('name') == 'cpf') {
+        if($(input).attr('id') == 'cpf' || $(input).attr('name') == 'cpf') {
             if($(input).val().trim().match(/^([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})$/) == null) {
                 return false;
             }
@@ -55,6 +55,15 @@
             }
         }
     }
+       /* if($(input).attr('id') == 'venc' || $(input).attr('name') == 'vencimento') {
+            if(){
+
+            }
+
+        }
+
+    }
+
 
      /*function validate (input) {
         if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
@@ -100,13 +109,64 @@
         $(thisAlert).removeClass('alert-validate');
         $(thisAlert).find('.btn-hide-validate').remove();
     }
+
     
 
-
-})(jQuery);
+    (jQuery);
 
     $(document).ready(function() {
-    $(".js-select2").select2({
-      searchInputPlaceholder: 'Digite o vendedor'
+        $(".js-select2").select2({
+            searchInputPlaceholder: ''
+        });
+    })
+
+    
+
+    $(document).ready(function() {
+        $(".dinheiro").maskMoney({
+            prefix: "R$:",
+            decimal: ",",
+            thousands: "."
+        });
     });
-  });
+
+    /*
+    new Vue({
+    el: '#app',
+        data() {
+        const m = {
+            decimal: ',',
+            thousands: '.',
+            precision: 2,
+            prefix: 'R$ ',
+            suffix: ' #',
+            masked: false
+    };
+
+    return {
+      price: null,
+      money: m
+    }
+  }
+})
+    */
+
+    /*$(function() {
+        $('#currency').maskMoney();
+    })*/
+
+
+})
+
+
+
+  /*
+
+    $('.cpf').mask('000-000.000-00');
+    $('.cep').mask('00000-000');
+    $('.negociação').mask('#.##0,00', {reverse: true});
+    $('.telefone').mask('(00) 0 0000-0000');
+
+
+
+  */
