@@ -33,14 +33,24 @@
 <!--===============================================================================================-->
 
 </head>
-<body>
+<body style="background-color:#213147;">
+	<div id="loader" class="loader">
+		<a><img src="images/bluecrop.png" alt="BlueCableLogo" class="logo"></a>
+		<script>
+			jQuery(window).load(function() {
+        	$(".loader").delay(1500).fadeOut("slow");
+    		$("#tudo_page").toggle("fast");
+    	});
+		</script>
+	</div>
+	<div style="display:none" id="tudo_page">
 	<header>
 			<div class="img-header">
 				<img src="images/bluecrop.png" alt="imagem" width=100%>
 			</div>
 		</header>
 
-	<div class="container-contact100">
+	<div class="container-contact100" >
 		<div class="wrap-contact100">
 			<form method="post" action="processa.php" class="contact100-form validate-form">
 				<span class="contact100-form-title">
@@ -793,10 +803,12 @@
 
 <footer>
 	<div class="img-footer">
+		<p class="text-footer">Site criado por <a href="https://github.com/ntcaetano" target="_blank" rel="external"><b>Natanael Caetano</b></a> e <a><b>Juan Cavalheiro</b></a> da empresa <a href="https://www.facebook.com/BlueCableInc/"  target="_blank" rel="external"><b>Bluecable</b></a></p>
 			<img src="images/bluecrop.png" alt="imagem" width=100%>
 		</div>
 		</div>
 	</div>
 </footer>
+</div>
 </body>
 </html>
