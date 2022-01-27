@@ -33,17 +33,7 @@
 <!--===============================================================================================-->
 
 </head>
-<body style="background-color:#213147;">
-	<div id="loader" class="loader">
-		<a><img src="images/bluecrop.png" alt="BlueCableLogo" class="logo"></a>
-		<script>
-			jQuery(window).load(function() {
-        	$(".loader").delay(1500).fadeOut("slow");
-    		$("#tudo_page").toggle("fast");
-    	});
-		</script>
-	</div>
-	<div style="display:none" id="tudo_page">
+<body>
 	<header>
 			<div class="img-header">
 				<img src="images/bluecrop.png" alt="imagem" width=100%>
@@ -59,18 +49,46 @@
 
 				<div class="wrap-input100 validate-input bg1" data-validate="Campo obrigatório">
 					<span class="label-input100">Nome completo *</span>
-					<input class="input100" type="text" name="nome" maxlength="40" placeholder="Digite seu nome completo">
+					<input class="input100" type = "text" name="nome" maxlength="40" placeholder="Digite seu nome completo" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+					>
 				</div>
 
-				<div class="wrap-input100 bg1 rs1-wrap-input100 validate-input" id="cpf1" data-validate="Campo obrigatório">
-					<span class="label-input100">Cpf *</span>
-					<input class="input100" type="number" name="cpf" id="cpf" maxlength="14" placeholder="11122233344" autocomplete="off">
+				<div class="wrap-input100 bg1 rs1-wrap-input100 validate-input" id="cpfcnpj" data-validate="Campo obrigatório">
+					<span class="label-input100" id="cpfcnpj">Cpf ou Cnpj *</span>
+					<input class="input100" id="cpfcnpj" type="text" name="cpfcnpj" maxlength="14" placeholder="999.999.999-99 ou 99.999.999/9999-99" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);
+					" autocomplete="off">
+					<script>
+						$("#cpfcnpj").keydown(function(){
+							try {
+								$("#cpfcnpj").unmask();
+							} catch (e) {}
+
+							var tamanho = $("#cpfcnpj").val().length;
+
+							if(tamanho < 11){
+								$("#cpfcnpj").mask("999.999.999-99");
+							} else {
+								$("#cpfcnpj").mask("99.999.999/9999-99");
+							}
+
+							// ajustando foco
+							var elem = this;
+							setTimeout(function(){
+								// mudo a posição do seletor
+								elem.selectionStart = elem.selectionEnd = 10000;
+							}, 0);
+							// reaplico o valor para mudar o foco
+							var currentValue = $(this).val();
+							$(this).val('');
+							$(this).val(currentValue);
+						});
+					</script>
 				</div>
 
 				<!--Data de nascimento-->
 				<div class="wrap-input100 bg1 rs1-wrap-input100 validate-input" data-validate="Campo obrigatório">
 					<span class="label-input100">Data de nascimento *</span>
-					<input class="input100" onchange="validaDataVencimento(this.value)" type="date" input name="data" placeholder="Digite sua data de nascimento">
+					<input class="input100" onchange="validaDataVencimento(this.value)" type="date" input name="data" placeholder="Digite sua data de nascimento" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
 				</div>
 
 				<!--<div class="wrap-input100 bg1 rs1-wrap-input100 validate-input" data-validate="Campo obrigatório">
@@ -80,26 +98,26 @@
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100 validate-input" data-validate="Campo obrigatório">
 					<span class="label-input100">WhatsApp *</span>
-					<input class="input100" type="number" name="telefone" maxlength="10" placeholder="51988888888">
+					<input class="input100" type="number" name="telefone" maxlength="11" placeholder="51988888888" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100 validate-input" data-validate="Campo obrigatório">
 					<span class="label-input100">Contrato *</span>
-					<input class="input100" type="number" name="contrato" maxlength="9" placeholder="Digite o número do contrato">
+					<input class="input100" type="number" name="contrato" maxlength="9" placeholder="Digite o número do contrato" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100 validate-input" data-validate="Campo obrigatório">
 					<span class="label-input100">Cep *</span>
-					<input class="input100" type="number" name="cep" maxlength="8" placeholder="11223344">
+					<input class="input100" type="number" name="cep" maxlength="14" placeholder="11223344" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100 validate-input" data-validate="Campo obrigatório">
 					<span class="label-input100">Endereço *</span>
-					<input class="input100" type="text" name="endereço" maxlength="50" placeholder="Digite seu endereço">	
+					<input class="input100" type="text" name="endereço" maxlength="50" placeholder="Digite seu endereço" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">	
 				</div>
 
 
-				<div class="wrap-input100 input100-select bg1 validate-input" data-validate="Campo obrigatório">
+				<div class="wrap-input100 input100-select bg1 validate-input" data-validate="Campo obrigatório" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
 					<span class="label-input100">Cidade *</span>
 						<div>
 							<select class="js-select2" name="endereço" maxlength="20">
@@ -533,13 +551,13 @@
 				<!--Vencimento-->
 				<div class="wrap-input100 bg1 rs1-wrap-input100 validate-input" data-validate="Campo obrigatório">
 					<span class="label-input100">Vencimento *</span>
-					<input class="input100" onchange="validaDataVencimento(this.value)" id='venc' type="date" input name="data" minplaceholder="Digite a data do vencimento">
+					<input class="input100" onchange="validaDataVencimento(this.value)" id='venc' type="date" input name="data" minplaceholder="Digite a data do vencimento" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
 					<!--<input id="date" type="date" value="2017-06-01">-->
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100 validate-input" data-validate="Campo obrigatório">
 					<span class="label-input100">Valor de negociação *</span>
-					<input class="input100" type="number" name="dinheiro" maxlength="6" placeholder="Digite o valor da negociação">
+					<input class="input100" type="number" name="dinheiro" maxlength="6" placeholder="000.00" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
 				</div>
 
 				<!--v-model="price" v-money="price !== null ? money : null" />-->
@@ -547,7 +565,7 @@
 				<div class="wrap-input100 input100-select bg1 validate-input" data-validate="Campo obrigatório">
 					<span class="label-input100">Vendedor *</span>
 						<div>
-							<select class="js-select2" name="vendedor" maxlength="20">
+							<select class="js-select2" name="vendedor" maxlength="20" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
 								<option placeholder="" value="" >Selecione</option>
 								<option>Agatha Santos</option>
 								<option>Alexandre Porto</option>
@@ -803,12 +821,11 @@
 
 <footer>
 	<div class="img-footer">
-		<p class="text-footer">Site criado por <a href="https://github.com/ntcaetano" target="_blank" rel="external"><b>Natanael Caetano</b></a> e <a><b>Juan Cavalheiro</b></a> da empresa <a href="https://www.facebook.com/BlueCableInc/"  target="_blank" rel="external"><b>Bluecable</b></a></p>
-			<img src="images/bluecrop.png" alt="imagem" width=100%>
+		<img src="images/bluecrop.png" alt="imagem" width=100%><br><br>
+		<p id="text-footer">Site criado por <a href="https://github.com/ntcaetano" target="_blank" rel="external"><b>Natanael Caetano</b></a> da empresa <a href="https://www.facebook.com/BlueCableInc/"  target="_blank" rel="external"><b>BlueCable</b></a></p>
 		</div>
 		</div>
 	</div>
 </footer>
-</div>
 </body>
 </html>

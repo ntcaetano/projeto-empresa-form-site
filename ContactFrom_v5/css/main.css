@@ -554,19 +554,23 @@ textarea.input100 {
 
 footer {
   background-color: #333333;
-  padding: 10px;
+  padding: 30px;
 }
 
 .img-footer {
   margin: auto;
   width: 200px;
 }
-.text-footer > p > a {
+
+#text-footer {
+  font-family: Poppins-Regular;
   color: white; 
   text-decoration: none;
+  text-align: center;
+  margin-inline: -65px;
 }
 
-.text-footer > p > a:hover {
+#text-footer > p > a:hover {
   color:rgba(46, 144, 255, 0.829)
 }
 
